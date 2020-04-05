@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronomètre</title>
+    <link rel="stylesheet" href="exercice-10.css">
+    <script type="text/javascript" src="exercice-10.js"></script>
+</head>
+
+<!-- Créer un chronomètre composé d'un afficheur et 3 boutons : un bouton "start" pour lancer le
+chronomètre , un bouton "stop" pour l’arrêter et un bouton "reset" pour le remettre à zéro. -->
+
+<body>
+
+    <div id="chrono">
+        <span id="h">00</span> :
+        <span id="min">00</span> :
+        <span id="sec">00</span> :
+        <span id="msec">00</span>
+    </div>
+
+    <div>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+
+
+</body>
+
+</html>

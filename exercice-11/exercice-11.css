@@ -1,0 +1,31 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 17pt;
+    width: 400px;
+    text-align: justify;
+}
+
+input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 60px;
+    width: 130px;
+    border-radius: 13px;
+    border-style: none;
+    background-color: cadetblue;
+    color: white;
+}
+
+#table {
+    margin-left: 10px;
+    background-color: orange;
+}

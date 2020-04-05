@@ -1,0 +1,23 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+    color: orange;
+}
+
+button {
+    border-style: none;
+    font-size: 20px;
+    height: 70px;
+    width: 300px;
+    background-color: cadetblue;
+    color: white;
+    margin-bottom: 30px;
+}
+
+div {
+    text-align: center;
+}

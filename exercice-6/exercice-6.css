@@ -1,0 +1,39 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+p {
+    font-size: 15px;
+    font-style: italic;
+}
+
+input {
+    padding: 8px;
+    border-color: cadetblue;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#submit {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 60px;
+    background-color: cadetblue;
+    color: white;
+}
