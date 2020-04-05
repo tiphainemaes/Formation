@@ -1,0 +1,532 @@
+@font-face {
+    font-family: 'Adobe-Ming';
+    src: url(police/AdobeMingStd-Light.otf)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Adobe-Ming';
+    background-color: #def1f6;
+}
+
+#carré-vert {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #E6F186;
+    border-radius: 30px;
+}
+
+#logo-vache {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    width: 72px;
+}
+
+#titre {
+    position: absolute;
+    top: 25px;
+    left: 410px;
+    transform: translate(-50%, -50%);
+    font-size: 60pt;
+}
+
+#explication {
+    position: absolute;
+    top: 280px;
+    left: 405px;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    line-height: 35px;
+    font-size: 17pt;
+    width: 385px;
+}
+
+#niveau {
+    line-height: 5px;
+    position: absolute;
+    top: 550px;
+    left: 247px;
+    transform: translate(-50%, -50%);
+}
+
+#choix-niveau {
+    width: 75px;
+    height: 75px;
+    background-color: #FFF172;
+    border-radius: 25px;
+    border-style: none;
+    text-align: center;
+    font-family: 'Adobe-Ming';
+    font-size: 33pt;
+}
+
+#generer-nombre {
+    position: absolute;
+    top: 569px;
+    left: 340px;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    background-color: #FFDB7A;
+    border-radius: 25px;
+    border-style: none;
+    text-align: center;
+    font-family: 'Adobe-Ming';
+    font-size: 23pt;
+}
+
+
+/* #saisie-nombre {
+    position: absolute;
+    top: 569px;
+    left: 560px;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    background-color: #F8B0B0;
+    border-radius: 25px;
+    border-style: none;
+    text-align: center;
+    font-family: 'Adobe-Ming';
+    font-size: 23pt;
+} */
+
+#cadre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 1000px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1pt;
+    border-radius: 20px;
+}
+
+#input {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F8B0B0;
+    border-radius: 25px;
+    border-style: none;
+    text-align: center;
+    font-family: 'Adobe-Ming';
+    font-size: 35pt;
+    width: 220px;
+    height: 80px;
+}
+
+#result1 {
+    visibility: hidden;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: #E6F186;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage1 {
+    position: absolute;
+    top: 18%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-1 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-1 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result2 {
+    visibility: hidden;
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    background-color: #E6F186;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage2 {
+    position: absolute;
+    top: 25%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-2 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-2 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result3 {
+    visibility: hidden;
+    position: absolute;
+    top: 29%;
+    left: 15%;
+    background-color: #E6F186;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage3 {
+    position: absolute;
+    top: 32%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-3 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-3 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result4 {
+    visibility: hidden;
+    position: absolute;
+    top: 36%;
+    left: 15%;
+    background-color: #FFF172;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage4 {
+    visibility: hidden;
+    position: absolute;
+    top: 39%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-4 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-4 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result5 {
+    visibility: hidden;
+    position: absolute;
+    top: 43%;
+    left: 15%;
+    background-color: #FFF172;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage5 {
+    position: absolute;
+    top: 46%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-5 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-5 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result6 {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    background-color: #FFDB7A;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage6 {
+    position: absolute;
+    top: 53%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-6 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-6 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result7 {
+    visibility: hidden;
+    position: absolute;
+    top: 57%;
+    left: 15%;
+    background-color: #FFDB7A;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage7 {
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-7 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-7 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result8 {
+    visibility: hidden;
+    position: absolute;
+    top: 64%;
+    left: 15%;
+    background-color: #FF9A7A;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage8 {
+    position: absolute;
+    top: 67%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-8 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-8 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result9 {
+    visibility: hidden;
+    position: absolute;
+    top: 71%;
+    left: 15%;
+    background-color: #FF9A7A;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage9 {
+    position: absolute;
+    top: 74%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-9 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-9 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#result10 {
+    visibility: hidden;
+    position: absolute;
+    top: 78%;
+    left: 15%;
+    background-color: #FF9A7A;
+    width: 130px;
+    height: 55px;
+    font-family: 'Adobe-Ming';
+    font-size: 20pt;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#affichage10 {
+    position: absolute;
+    top: 81%;
+    left: 57%;
+    font-size: 20pt;
+}
+
+#aff-taur-10 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#aff-vac-10 {
+    visibility: hidden;
+    width: 50px;
+}
+
+#try {
+    position: absolute;
+    top: 83%;
+    left: 15%;
+    font-size: 37pt;
+}
+
+
+/* Regles */
+
+#rules {
+    position: absolute;
+    top: 850px;
+    left: 405px;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+    line-height: 25px;
+    font-size: 12pt;
+    width: 385px;
+}
+
+#etoile {
+    position: absolute;
+    left: 150px;
+}
+
+#logo1 {
+    position: absolute;
+    top: 90px;
+    width: 75px;
+}
+
+#logo2 {
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    width: 75px;
+}
+
+#victoire {
+    position: absolute;
+    top: 170px;
+    font-size: 15pt;
+}
+
+
+/* NUAGES */
+
+#nuage1 {
+    width: 175px;
+    position: absolute;
+    top: 700px;
+    left: 200px;
+    transform: translate(-50%, -50%);
+}
+
+#nuage2 {
+    width: 200px;
+    position: absolute;
+    top: 400px;
+    left: 850px;
+    transform: translate(-50%, -50%);
+}
+
+#nuage3 {
+    width: 200px;
+    position: absolute;
+    top: 70px;
+    left: 1510px;
+    transform: translate(-50%, -50%);
+}
+
+#nuage4 {
+    width: 225px;
+    position: absolute;
+    top: 300px;
+    left: 2100px;
+    transform: translate(-50%, -50%);
+}
+
+#nuage5 {
+    width: 200px;
+    position: absolute;
+    top: 470px;
+    left: 1700px;
+    transform: translate(-50%, -50%);
+}

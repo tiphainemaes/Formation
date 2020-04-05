@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu des Capitales</title>
+    <link rel="stylesheet" href="exercice-1.css">
+    <script type="text/javascript" src="exercice-1.js"></script>
+
+</head>
+
+<!-- En utilisant les balises <span> créez un petit jeu dans lequel l'utilisateur pourra cliquer sur
+    un texte **** pour afficher la capitale d'un pays :
+    - La capitale de la France est *****
+    - La capitale de l'Italie est *****
+    - La capitale des USA est *****
+    - La capitale de l'Allemagne est *****
+    - La capitale de la Corée du Sud est ***** -->
+
+<body>
+    <h1>Quelle est la capitale de ces différents pays ? Clique sur les étoiles pour les faire apparaître.</h1>
+
+    <div>La capitale de la France est
+        <span id="france" onclick="paris()">*****</span></div>
+
+    <div>La capitale de l'Italie est
+        <span id="italie" onclick="rome()">*****</span></div>
+
+    <div>La capitale des USA est
+        <span id="usa" onclick="washington()">*****</span></div>
+
+    <div>La capitale de l'Italie est
+        <span id="allemagne" onclick="berlin()">*****</span></div>
+
+    <div>La capitale de l'Italie est
+        <span id="coree" onclick="seoul()">*****</span></div>
+
+</body>
+
+</html>

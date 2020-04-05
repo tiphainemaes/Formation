@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur</title>
+    <link rel="stylesheet" href="exercice-3.css">
+    <script type="text/javascript" src="exercice-3.js"></script>
+</head>
+
+<!-- Créez un convertisseur de monnaie euro / dollar avec deux champs input type=""text" et
+deux fonctions. Pour information le taux de conversion est 1€ = 1.24$
+Astuce : un champ input type="text" est un texte. Pour le transformer en nombre, il existe
+seulement deux fonctions JavaScript qui sont parseInt() et parseFloat(). -->
+
+<body>
+    <div>
+        <input type="text" id="euro" value="euro" onchange="conversionDollar(this.value)">
+    </div>
+    </br>
+    <div>
+        <input type="text" id="dollar" value="dollar" onchange="conversionEuro(this.value)">
+    </div>
+</body>
+
+</html>

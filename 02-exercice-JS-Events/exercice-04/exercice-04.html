@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taureau Vache</title>
+    <link rel="stylesheet" href="exercice-4.css">
+    <script type="text/javascript" src="exercice-4.js"></script>
+</head>
+
+<!-- Créer le jeu taureau vache. L’utilisateur définit le niveau de difficulté du jeu en saisissant un
+entier entre 3 et 8. Garder l’historique et le nombre des tentatives. -->
+
+<body>
+    <div>
+        <img id="nuage1" src="logo/cloud2.png">
+        <img id="nuage2" src="logo/cloud.png">
+        <img id="nuage3" src="logo/cloud.png">
+        <img id="nuage4" src="logo/cloud2.png">
+        <img id="nuage5" src="logo/cloud.png">
+    </div>
+
+    <div>
+        <div id="carré-vert"></div>
+        <img id="logo-vache" src="logo/logo-vache.png">
+        <p id="titre">Bull & Cow</p>
+    </div>
+
+
+    <div id="presentation">
+        <div>
+            <p id="explication">Welcome to the Bull & Cow's Game ! Choose your level between 3 and 8 numbers to guess. Next click on "ASK" to generate a random number. Now you are ready to play. Good luck ! </p>
+
+            <div id="niveau">
+                <p id="level">Level :</p>
+                <input id="choix-niveau" class="pointer" type="text" onchange="choixDeNiveau(this.value)">
+            </div>
+
+            <input id="generer-nombre" class="pointer" type="button" value="ASK" onclick="nombreAleatoire()">
+            <!-- <input id="saisie-nombre" class="pointer" type="button" value="Play" onclick="saisieChiffre()"> -->
+
+            <div id="rules">
+                <p>If you have a number in a good position, you find a bull*, but if it isn't the place, you find a cow**.</p>
+                <div><span>* </span>
+                    <span id="etoile">** </span>
+                </div>
+                <img id="logo1" src="logo/logo-taureau.png">
+                <span><img id="logo2" src="logo/logo-vache.png"></span>
+
+                <p id="victoire">You have to find all the bulls !</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="jeu">
+
+        <div id="cadre">
+            <input type="text" id="input" onchange="saisieChiffre(this.value)">
+            <div>
+                <div>
+                    <p id="result1"></p>
+                    <div id="affichage1">
+                        <span id="taureau1"></span>
+                        <span><img id="aff-taur-1" src="logo/logo-taureau.png"></span>
+                        <span id="vache1"></span>
+                        <span><img id="aff-vac-1" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result2"></p>
+                    <div id="affichage2">
+                        <span id="taureau2"></span>
+                        <span><img id="aff-taur-2" src="logo/logo-taureau.png"></span>
+                        <span id="vache2"></span>
+                        <span><img id="aff-vac-2" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result3"></p>
+                    <div id="affichage3">
+                        <span id="taureau3"></span>
+                        <span><img id="aff-taur-3" src="logo/logo-taureau.png"></span>
+                        <span id="vache3"></span>
+                        <span><img id="aff-vac-3" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result4"></p>
+                    <div id="affichage4">
+                        <span id="taureau4"></span>
+                        <span><img id="aff-taur-4" src="logo/logo-taureau.png"></span>
+                        <span id="vache4"></span>
+                        <span><img id="aff-vac-4" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result5"></p>
+                    <div id="affichage5">
+                        <span id="taureau5"></span>
+                        <span><img id="aff-taur-5" src="logo/logo-taureau.png"></span>
+                        <span id="vache5"></span>
+                        <span><img id="aff-vac-5" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result6"></p>
+                    <div id="affichage6">
+                        <span id="taureau6"></span>
+                        <span><img id="aff-taur-6" src="logo/logo-taureau.png"></span>
+                        <span id="vache6"></span>
+                        <span><img id="aff-vac-6" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result7"></p>
+                    <div id="affichage7">
+                        <span id="taureau7"></span>
+                        <span><img id="aff-taur-7" src="logo/logo-taureau.png"></span>
+                        <span id="vache7"></span>
+                        <span><img id="aff-vac-7" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result8"></p>
+                    <div id="affichage8">
+                        <span id="taureau8"></span>
+                        <span><img id="aff-taur-8" src="logo/logo-taureau.png"></span>
+                        <span id="vache8"></span>
+                        <span><img id="aff-vac-8" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+
+                <div>
+                    <p id="result9"></p>
+                    <div id="affichage9">
+                        <span id="taureau9"></span>
+                        <span><img id="aff-taur-9" src="logo/logo-taureau.png"></span>
+                        <span id="vache9"></span>
+                        <span><img id="aff-vac-9" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="result10"></p>
+                    <div id="affichage10">
+                        <span id="taureau10"></span>
+                        <span><img id="aff-taur-10" src="logo/logo-taureau.png"></span>
+                        <span id="vache10"></span>
+                        <span><img id="aff-vac-10" src="logo/logo-vache.png"></span>
+                    </div>
+                </div>
+                <div>
+                    <p id="try"></p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- <input id="saisie-nombre " class="pointer " type="text " value="**** " onchange="verification(this.value) "> -->
+    </div>
+    <!-- <div class="presentation ">
+            <p>Bienvenue dans le jeu du Taureau Vache ! Es-tu prêt à vaincre l'ordinateur ? Choisis ton niveau de difficulté entre 3 et 8.</p>
+            </br>
+            <p>Rappel des règles :</p>
+            <input type="button " class="pointer " value="INFO " onclick="reglesDuJeu() ">
+            <p id="regles ">
+                "Voici un rappel des régles : si tu trouves un bon chiffre mais à la mauvaise position, une vache apparaîtra, mais si ce bon chiffre est à la bonne position alors ce sera un taureau. Bonne chance ! "
+            </p>
+        </div>  -->
+    </div>
+
+
+
+
+</body>
+
+</html>
