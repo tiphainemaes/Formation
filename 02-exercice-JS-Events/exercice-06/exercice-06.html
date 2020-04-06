@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire tableau</title>
+    <link rel="stylesheet" href="exercice-06.css">
+    <script type="text/javascript" src="exercice-06.js"></script>
+</head>
+
+<!-- Ecrire une page web qui permet de récupérer les informations d’un utilisateur dans un
+tableau. Ces informations sont saisies à partir d’un formulaire. -->
+
+<body>
+    <form>
+        <div>
+            <h1>Identité</h1>
+            <p>Nom
+                <span id="prenom">Prénom</span>
+            </p>
+            <input type="text" id="form-nom">
+            <span>
+                <input type="text" id="form-prenom">
+            </span>
+            <p>Email</p>
+            <input type="text" id="form-email">
+        </div>
+        <div id="adresse">
+            <h1>Adresse</h1>
+            <p>Rue</p>
+            <input type="text" id="form-rue">
+            <p>Code Postal
+                <span id="ville">Ville</span>
+            </p>
+            <input type="text" id="form-cp">
+            <span>
+                <input type="text" id="form-ville">
+            </span>
+        </div>
+        <input type="button" value="Submit" id="submit" onclick="tableau()">
+    </form>
+</body>
+
+</html>
