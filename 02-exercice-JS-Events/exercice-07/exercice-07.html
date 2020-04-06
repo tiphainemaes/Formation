@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercice-07.css">
+    <script type="text/javascript" src="exercice-07.js"></script>
+</head>
+
+<!-- Créer une page HTML qui permet de récupérer les informations de l’utilisateur via un
+formulaire et les afficher dans une nouvelle page récapitulatif suite au submit du formulaire. -->
+
+<body>
+    <form>
+        <div>
+            <h1>Identité</h1>
+            <p>Nom
+                <span id="prenom">Prénom</span>
+            </p>
+            <input type="text" id="form-nom">
+            <span>
+                <input type="text" id="form-prenom">
+            </span>
+            <p>Email</p>
+            <input type="text" id="form-email">
+        </div>
+        <div id="adresse">
+            <h1>Adresse</h1>
+            <p>Rue</p>
+            <input type="text" id="form-rue">
+            <p>Code Postal
+                <span id="ville">Ville</span>
+            </p>
+            <input type="text" id="form-cp">
+            <span>
+                <input type="text" id="form-ville">
+            </span>
+        </div>
+        <input type="button" value="Submit" id="submit" onclick="tableau()">
+    </form>
+</body>
+
+</html>

@@ -10,4 +10,8 @@ function tableau() {
     let tab = [];
 
     tab = [nom, prenom, email, rue, codePostal, ville];
+
+
+    document.write(tab);
+
 }

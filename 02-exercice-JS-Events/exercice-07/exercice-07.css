@@ -1,0 +1,48 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12pt;
+}
+
+input {
+    width: 150px;
+    padding: 8px;
+    border-color: cadetblue;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 14pt;
+}
+
+#prenom {
+    margin-left: 140px;
+}
+
+#form-email {
+    width: 325px;
+}
+
+#adresse {
+    margin-top: 50px;
+}
+
+#form-rue {
+    width: 325px;
+}
+
+#ville {
+    margin-left: 95px;
+}
+
+#submit {
+    width: 345px;
+    margin-top: 20px;
+    background-color: cadetblue;
+    color: white;
+}
