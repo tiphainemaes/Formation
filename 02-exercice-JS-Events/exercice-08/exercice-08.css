@@ -1,0 +1,16 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50pt;
+    text-align: center;
+}
+
+div {
+    border-style: solid;
+    background-color: #def1f6;
+    padding: 20px;
+}
