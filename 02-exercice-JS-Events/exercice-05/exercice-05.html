@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul impôt</title>
+    <link rel="stylesheet" href="exercice-05.css">
+    <script type="text/javascript" src="exercice-05.js"></script>
+
+</head>
+
+<!-- Ecrire une page HTML qui permet de calculer l'impôt d’une personne. Cette dernière doit
+saisir ces revenus ainsi que son code postale.
+Méthode de calcul: Si la personne habite dans le Nord-Pas-de-Calais, elle ne paye rien
+sinon elle paie la moitié de ces revenus. -->
+
+<body>
+
+
+    <div>
+        <h1>Calcul impôt</h1>
+
+        <div>
+            <p>
+                <span>Revenus :</span>
+                <span id="cp">Code postal :</span>
+            </p>
+        </div>
+
+        <span><input type="text" id="revenu"></span>
+        <span><input type="text" id="code-postal"></span>
+
+
+    </div>
+    <input id="submit" type="button" value="Submit" onclick="calculImpot()">
+
+    <p id="impot"></p>
+</body>
+
+</html>

@@ -33,8 +33,6 @@ function nombreAleatoire() {
 }
 
 
-
-
 function affichage(chiffre) {
     compteur++
     console.log("compteur = " + compteur);
@@ -164,17 +162,12 @@ function affichage(chiffre) {
         document.getElementById("vache10").innerHTML = resultatVache;
         document.getElementById("try").innerHTML = "You lose !";
     }
-
-
 }
 
 
 function saisieChiffre(chiffre) {
-    //var chiffre = prompt("Saisie des chiffres pour battre l'ordinateur");
 
     console.log(chiffre);
-
-
 
     var tabSaisie = Array.from(String(chiffre), Number);
 

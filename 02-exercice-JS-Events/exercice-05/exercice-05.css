@@ -1,0 +1,41 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18pt;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+input {
+    width: 200px;
+    padding: 8px;
+    border-color: cadetblue;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+p {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#cp {
+    margin-left: 160px;
+}
+
+#code-postal {
+    margin-left: 20px;
+}
+
+#submit {
+    width: 465px;
+    margin-top: 20px;
+    background-color: cadetblue;
+    color: white;
+}
