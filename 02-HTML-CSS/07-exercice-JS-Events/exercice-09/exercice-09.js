@@ -9,7 +9,6 @@ function depassement(texte) {
     //     mot--;
     // }
 
-
     document.getElementById("caractere").innerHTML = "N° de caractères : " + caractere;
     document.getElementById("mot").innerHTML = "N° de mots : " + mot;
 
@@ -18,6 +17,4 @@ function depassement(texte) {
     } else if (mot > 10) {
         document.getElementById("depassement").innerHTML = "Dépassement";
     }
-
-
 }
