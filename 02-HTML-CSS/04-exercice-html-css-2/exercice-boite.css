@@ -1,0 +1,67 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    border-width: 5px;
+
+}
+p{
+    margin-top: 0px;
+}
+#boite1 {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 350px;
+    height: 350px;
+    background-color: tomato;
+    border-style: solid;
+    border-color: teal;
+}
+#boite2 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 250px;
+    height: 250px;
+    background-color: teal;
+    border-style: solid;
+    border-color: wheat;
+}
+#boite3 {
+    position: absolute;
+    margin-top: 225px;
+    margin-left: 125px;
+    width: 350px;
+    height: 350px;
+    background-color: wheat;
+    border-style: solid;
+    border-color: orange;
+}
+#boite4 {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 75px;
+    width: 175px;
+    height: 150px;
+    background-color: orange;
+    border-style: solid;
+    border-color: thistle;
+}
+#boite5 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 200px;
+    height: 150px;
+    background-color: thistle;
+    border-style: solid;
+    border-color: tomato;
+}
+#boite6 {
+    margin-left: 125px;
+    width: 200px;
+    height: 150px;
+    background-color: tomato;
+    border-style: solid;
+    border-color: teal;
+}

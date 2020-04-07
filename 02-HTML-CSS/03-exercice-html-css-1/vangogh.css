@@ -1,0 +1,108 @@
+@font-face{font-family: 'ArcherPro-Bold'; src : url('polices/ArcherPro-Bold.otf');
+}
+@font-face{font-family: 'Seravek-ExtraLight'; src: url('polices/Seravek-ExtraLight.ttf');
+}
+@font-face{font-family: 'Sevarek'; src: url('polices/Seravek.ttf');
+}
+@font-face{font-family: 'ArcherPro-Thin'; src: url('polices/ArcherPro-Thin.otf');
+}
+@font-face{font-family: 'Sevarek-Bold'; src: url('polices/Seravek-Bold.ttf');
+}
+
+
+img#signature{
+    margin-top: 20px;
+    margin-left: 60px;
+    width: 1000px;
+}
+
+
+
+nav ul {
+    text-align: center;
+}
+nav li, a{
+    display: inline-block;
+    font-family: 'Seravek-ExtraLight';
+    text-decoration: none;
+    padding: 8px;
+    color: black;
+    font-size: 14px;
+}
+
+
+
+img#portrait{
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 500px;
+    float: left;
+}
+h2.portrait, h3.portrait {
+    margin-left: 930px ;
+    width: 500px;
+}
+h2.portrait{
+    margin-top: 200px;
+    color: #3f657a;
+}
+h3.portrait{
+    margin-bottom: 200px;
+    font-family: 'Seravek-ExtraLight';
+    color:#989a97;
+}
+
+
+
+img#foin{
+    width: 280px;
+    margin-top: 170px;
+    margin-right: 500px;
+    float: right;
+}
+h2, h3, p{
+    width: 600px;
+    margin-left: 395px ;
+    text-align: justify;
+}
+h2{
+    font-family: 'ArcherPro-Bold';
+    color: #989a97;
+}
+h3{
+    font-family: 'ArcherPro-Bold';
+    color: #3f657a;
+    font-size: 18px;
+}
+p{
+    font-family: 'Sevarek';
+    font-size: 14px;
+}
+h2.paragraphe2, p.paragraphe2{
+    margin-left: 925px;
+}
+
+#sommaire3{
+    margin-top: 50px;
+}
+
+
+
+img#nuit{
+    margin-top: 50px;
+    width: 100%;
+}
+img#champ {
+    margin-left: 395px;
+    width: 400px;
+    float: left;
+}
+
+
+
+a#link{
+    color: #3f657a;
+    font-family: 'Sevarek-Bold';
+    text-decoration: underline;
+}
+

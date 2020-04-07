@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dépassement</title>
+    <link rel="stylesheet" href="exercice-09.css">
+    <script type="text/javascript" src="exercice-09.js"></script>
+</head>
+
+<!-- On se propose d’avoir une page web qui affiche le contenu suivant:
+
+Hi, 
+My name is Alex, and I am born on the year 1980.
+N° de mots: 11
+N°de caractères : 49
+
+On affiche le message “Dépassement” en rouge si le nombre de caractères du texte
+dépasse les 100 ou que le nombre de mots dépasse les 10. -->
+
+<body>
+
+    <textarea onchange="depassement(this.value)"></textarea>
+    <p id="mot">N° de mots : 0</p>
+    <p id="caractere">N° de caractères : 0</p>
+    <div id="depassement"></div>
+</body>
+
+</html>

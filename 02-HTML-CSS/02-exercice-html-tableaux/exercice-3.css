@@ -1,0 +1,25 @@
+table{
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    border: 1px solid lightgray;
+}
+th, td{
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+table tr:nth-child(even){
+    background-color: lightgray;
+  }
+
+#company{
+    column-width: 300px ;
+}
+#contact{
+    column-width: 200px ;
+}
+#country{
+    column-width: 100px ;
+}

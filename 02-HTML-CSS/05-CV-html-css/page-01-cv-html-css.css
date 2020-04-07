@@ -1,0 +1,464 @@
+@font-face {
+    font-family: 'Clarista';
+    src: url(polices/Clarista.otf)
+}
+
+@font-face {
+    font-family: 'Sevarek';
+    src: url(polices/Seravek.ttf);
+}
+
+@font-face {
+    font-family: 'Sevarek-L';
+    src: url(polices/Seravek-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Sevarek-EL';
+    src: url(polices/Seravek-ExtraLight.ttf)
+}
+
+@font-face {
+    font-family: 'Icone';
+    src: url(polices/SocialMediaCircled.otf);
+}
+
+@font-face {
+    font-family: 'Seravek-M';
+    src: url(polices/Seravek-Medium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*BOUTON FLECHE*/
+
+.boutonhaut {
+    position: absolute;
+    top: 47%;
+    left: 97%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    font-family: 'Sevarek-EL';
+    color: gray;
+    font-size: 60px;
+    opacity: 90%;
+}
+
+.boutonbas {
+    position: absolute;
+    top: 53%;
+    left: 97%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    font-family: 'Sevarek-EL';
+    color: gray;
+    font-size: 60px;
+    opacity: 90%
+}
+
+.boutonhaut:hover {
+    color: black;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.boutonbas:hover {
+    color: black;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+
+/*LOGO*/
+
+#cerclelogo {
+    position: fixed;
+    top: 6.2%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+}
+
+
+/*MENU*/
+
+div.menu {
+    text-transform: uppercase;
+    font-family: 'Sevarek-EL';
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.menu>div {
+    width: 200px;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+p.gras:hover {
+    font-family: 'Sevarek';
+    transition: 1s;
+}
+
+
+/*PAGE 1*/
+
+#page1 {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#rond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e5ce6c;
+    opacity: 100%;
+    width: 410px;
+    height: 410px;
+    border-radius: 400px;
+}
+
+a#rond:hover {
+    background-color: black;
+    transition-duration: 2s;
+}
+
+#tiphaine {
+    position: absolute;
+    top: 49.6%;
+    left: 50.2%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 100px;
+    font-family: 'Clarista';
+    font-size: 90pt;
+    color: white;
+    /* font-size: 90pt; */
+}
+
+#metier {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+    font-family: 'Sevarek-EL';
+    font-size: 16pt;
+    color: white;
+    /* font-size: 16pt; */
+}
+
+
+/* img#pagedegarde {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    height: auto;
+} */
+
+#pagedegarde {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+    grid-gap: 1em;
+    vertical-align: middle;
+}
+
+
+/*PAGE 2*/
+
+#page2 {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#profil {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    max-width: 12%;
+    height: auto;
+}
+
+#developper {
+    font-size: 20px;
+}
+
+#presentation {
+    position: absolute;
+    top: 48%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    font-family: 'Sevarek-L';
+    /* color: #879397; */
+    font-size: 14pt;
+    text-align: justify;
+}
+
+#cv {
+    font-size: 25pt;
+    font-family: 'Sevarek-L';
+    color: #dab92d;
+}
+
+#cv:hover {
+    color: black;
+    font-family: 'Seravek';
+    transition: 1s;
+}
+
+
+/*PAGE 3*/
+
+#page3 {
+    position: absolute;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.portfolio-gallery {
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+    grid-gap: 1em;
+    vertical-align: middle;
+}
+
+.column img {
+    margin-top: 17px;
+    vertical-align: middle;
+    border-style: solid;
+    border-color: #ecdc96;
+    border-width: 3px;
+}
+
+.column img:hover {
+    cursor: pointer;
+}
+
+
+/*PAGE 4*/
+
+#page4 {
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+/*PAGE 5*/
+
+#page5 {
+    position: absolute;
+    top: 450%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+
+/*PAGE 6*/
+
+#page6 {
+    position: absolute;
+    top: 550%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.contact {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Sevarek-EL';
+    font-size: 16pt;
+    text-align: justify;
+    width: 600px;
+}
+
+#contactme {
+    top: 28%;
+    font-size: 25pt;
+    font-family: 'Sevarek-L';
+}
+
+.formulaire {
+    width: 610px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Sevarek-EL';
+    font-size: 15pt;
+}
+
+input[type=text] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid;
+    font-family: 'Sevarek-EL';
+    font-size: 15pt;
+}
+
+textarea {
+    width: 605px;
+    height: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid;
+    font-family: 'Sevarek-EL';
+    font-size: 15pt;
+}
+
+input[type=submit] {
+    background-color: white;
+    font-family: 'Icone';
+    font-size: 45pt;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    float: right;
+}
+
+#linkedin {
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    opacity: 65%;
+    font-family: 'Icone';
+    font-size: 45pt;
+    color: #dab92d;
+}
+
+#github {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    opacity: 65%;
+    font-family: 'Icone';
+    font-size: 45pt;
+    color: #dab92d;
+}
+
+#behance {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    opacity: 65%;
+    font-family: 'Icone';
+    font-size: 45pt;
+    color: #dab92d;
+}
+
+#linkedin:hover {
+    color: black;
+    opacity: 100%;
+    transition: 1s;
+}
+
+#github:hover {
+    color: black;
+    opacity: 100%;
+    transition: 1s;
+}
+
+#behance:hover {
+    color: black;
+    opacity: 100%;
+    transition: 1s;
+}
+
+
+/* img#pagedefin {
+    width: 100%;
+    opacity: 0.2;
+} */
+
+img#pagedefin {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    margin-bottom: 20px;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-style: solid;
+    border-width: 1pt;
+    opacity: 50%;
+}

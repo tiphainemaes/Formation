@@ -1,0 +1,20 @@
+table{
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+}
+th, td{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#company{
+    column-width: 300px ;
+}
+#contact{
+    column-width: 200px ;
+}
+#country{
+    column-width: 100px ;
+}
