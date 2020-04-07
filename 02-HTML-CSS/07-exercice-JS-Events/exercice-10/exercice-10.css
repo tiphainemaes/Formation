@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Andrea-Script';
+    src: url(police/AndreaScript-Thin.otf)
+}
+
+@font-face {
+    font-family: 'Sevarek-EL';
+    src: url(police/Seravek-ExtraLight.ttf)
+}
+
+body {
+    margin: 0px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    opacity: 70%;
+}
+
+#cercle {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#todo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Andrea-Script';
+    font-size: 80pt;
+    line-height: 55px;
+}
+
+#new-task {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #99B6BB;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-family: 'Sevarek-EL';
+    font-size: 15pt;
+    color: #99B6BB;
+}
+
+#add {
+    position: absolute;
+    top: 28%;
+    left: 57.5%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Sevarek-EL';
+    font-size: 32pt;
+    transition: 1s;
+}
+
+#add:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+#cadre {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 700px;
+    width: 475px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+}
+
+#task {
+    font-family: 'Andrea-Script';
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 50pt;
+}
+
+#trash {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 30px;
+    background-color: #99B6BB;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+#trash-white {
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 32.5px;
+    height: 45px;
+    width: 45px;
+}
+
+.cercle-à-cocher {
+    margin-top: 50px;
+    margin-left: 70px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #99B6BB;
+    border-width: 2px;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 40px;
+    line-height: 50px;
+    font-size: 17pt;
+    font-family: 'Sevarek-EL';
+    color: #99B6BB;
+}

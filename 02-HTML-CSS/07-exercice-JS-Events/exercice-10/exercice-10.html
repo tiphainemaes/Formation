@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="exercice-10.css">
+    <script type="text/javascript" src="exercice-10.js"></script>
+</head>
+
+<!-- Créer une page HTML qui permet de faire une “todo-list” -->
+
+<body>
+
+    <!-- <img src="image/fond.jpg"> -->
+
+    <div>
+        <div id="cercle"></div>
+        <div id="todo">
+            <div>to</div>
+            <div>do</div>
+        </div>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Add a New task..." id="new-task">
+        <input type="button" value="+" id="add" class="pointer" onclick="addNewTask()">
+    </div>
+
+
+    <div id="cadre">
+        <div id="task">task
+            <span>
+                <input type="button" id="trash" class="pointer">
+                <img src="picto/delete-blanc.png" id="trash-white" class="pointer" onclick="deleteAllTask()">
+            </span>
+        </div>
+
+        <div>
+            <ul>
+                <li>Acheter du pain</li>
+                <li>Acheter du jus d'orange</li>
+                <li></li>
+            </ul>
+        </div>
+
+        <!-- <div id="task1">
+            <div class="cercle-à-cocher">
+                <span>
+                    <input type="text" class="pointer" class="aff-task"> 
+                </span>
+            </div>
+        </div> -->
+
+    </div>
+
+
+
+</body>
+
+</html>
