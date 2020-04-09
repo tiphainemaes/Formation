@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table de multiplication</title>
-    <link rel="stylesheet" href="exercice-11.css">
-    <script type="text/javascript" src="exercice-11.js"></script>
+    <link rel="stylesheet" href="exercice-11-v1.css">
+    <script type="text/javascript" src="exercice-11-v1.js"></script>
 </head>
+
 <!-- 
 1.Ecrire un script qui permet d'afficher la table de multiplication d'un nombre
 entier n:
@@ -22,8 +23,24 @@ multiplication pour n=1,2.....10. -->
 <body>
     <h1>Saisie un entier n pour afficher sa table de multiplication, ou affiche l'ensemble des tables de multiplication pour n=1,2...10.</h1>
 
-    <input type="button" id="saisie" value="Saisir n" onclick="demanderNombre()">
-    <input type="button" id="table" value="Table de n" onclick="table()">
+    <div>
+        <input type="text" placeholder="Entier n..." id="saisie">
+        <input type="button" value="+" id="saisie-n" class="pointer" onclick="demanderNombre()">
+        <input type="button" id="table" value="Table" onclick="table()">
+    </div>
+
+    <div id="n-entier"></div>
+
+    <table id="tab-n">
+        <tr>
+        </tr>
+    </table>
+    <table id="tab-multi">
+        <tr>
+        </tr>
+    </table>
+
+
 
 </body>
 
