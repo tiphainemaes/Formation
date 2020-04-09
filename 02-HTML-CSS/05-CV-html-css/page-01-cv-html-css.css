@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Andrea';
+    src: url(polices/AndreaScript-Thin.otf)
+}
+
+@font-face {
     font-family: 'Sevarek';
     src: url(polices/Seravek.ttf);
 }
@@ -164,12 +169,12 @@ a#rond:hover {
 #tiphaine {
     position: absolute;
     top: 49.6%;
-    left: 50.2%;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin-bottom: 100px;
-    font-family: 'Clarista';
-    font-size: 90pt;
-    color: white;
+    font-family: 'Andrea';
+    font-size: 75pt;
+    line-height: 50px;
     /* font-size: 90pt; */
 }
 
@@ -181,7 +186,6 @@ a#rond:hover {
     transform: translate(-50%, -50%);
     font-family: 'Sevarek-EL';
     font-size: 16pt;
-    color: white;
     /* font-size: 16pt; */
 }
 
