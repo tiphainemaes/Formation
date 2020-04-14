@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'Dosis-Bold';
+    src: url(police/Dosis/Dosis-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url(police/Poppins/Poppins-Medium.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(police/Poppins/Poppins-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(police/Poppins/Poppins-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(police/Poppins/Poppins-Light.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(police/Poppins/Poppins-Light.ttf)
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(police/Lato/Lato-Bold.ttf)
+}
+
+body {
+    margin: 0;
+}
+
+
+/*IMAGE*/
+
+#img-bg-shape {
+    float: right;
+    width: 55%;
+}
+
+#img-Pres-01 {
+    width: 38.94%;
+    position: absolute;
+    margin-top: 8.75%;
+    margin-left: 53.44%;
+}
+
+#img-souris {
+    width: 5%;
+    position: absolute;
+    margin-top: 44.12%;
+    margin-left: 47.5%;
+}
+
+#img-Pres-02 {
+    width: 40.79%;
+    position: absolute;
+    margin-top: 55.19%;
+    margin-left: 5.06%;
+}
+
+#img-bio {
+    width: 54.125%;
+    position: absolute;
+    margin-top: 52.25%;
+    margin-left: 45.875%;
+}
+
+
+/*LOGO MARKETING*/
+
+#img-marketing {
+    width: 5%;
+    position: absolute;
+    margin-top: 1.31%;
+    margin-left: 13.43%;
+}
+
+#text-marketing {
+    position: absolute;
+    margin-top: 3.93%;
+    margin-left: 19.37%;
+    font-family: 'Dosis-Bold';
+    font-size: 2.5vw;
+    color: #484848;
+}
+
+
+/*MENU*/
+
+#menu {
+    position: absolute;
+    margin-top: 3.43%;
+    margin-left: 62.5%;
+    font-family: 'Poppins-Medium';
+    font-size: 1vw;
+    color: #ffffff;
+}
+
+.menu {
+    margin-left: 30px;
+}
+
+
+/*RESEAUX SOCIAUX*/
+
+#facebook {
+    position: absolute;
+    width: 0.62%;
+    margin-top: 25.94%;
+    margin-left: 6.44%;
+}
+
+#google {
+    position: absolute;
+    width: 0.62%;
+    margin-top: 29%;
+    margin-left: 6.44%;
+}
+
+#twitter {
+    position: absolute;
+    width: 0.92%;
+    margin-top: 32.5%;
+    margin-left: 6.31%;
+}
+
+#instagram {
+    position: absolute;
+    width: 0.55%;
+    margin-top: 35.69%;
+    margin-left: 6.44%;
+}
+
+#tracé {
+    position: absolute;
+    width: 0.19%;
+    margin-top: 37.5%;
+    margin-left: 6.625%;
+}
+
+
+/*PRESENTATION*/
+
+#presentation {
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 13.31%;
+}
+
+#text-social-media {
+    font-family: 'Poppins-Medium';
+    font-size: 3.125vw;
+    color: #42495B;
+    line-height: 2vw;
+}
+
+#text-f-business {
+    font-family: 'Poppins-Bold';
+    font-size: 4.625vw;
+    color: #42495B;
+}
+
+#text-lorem-media {
+    font-family: 'Poppins-Light';
+    font-size: 1vw;
+    color: #7A839E;
+}
+
+#rect-01 {
+    position: absolute;
+    margin-top: 30.31%;
+    margin-left: 13.5%;
+    width: 13.5%;
+}
+
+#text-rect-01 {
+    position: absolute;
+    margin-top: 31.12%;
+    margin-left: 16.125%;
+    font-family: 'Poppins-Medium';
+    font-size: 1vw;
+    color: #ffffff;
+}
+
+
+/*BIOGRAPHY*/
+
+#text-bio-01 {
+    position: absolute;
+    margin-top: 59.38%;
+    margin-left: 51.125%;
+    font-family: 'Lato';
+    font-size: 1.25vw;
+    color: #7E76F9;
+}
+
+#text-bio-02 {
+    position: absolute;
+    margin-top: 61.5%;
+    margin-left: 51.125%;
+    font-family: 'Poppins-SemiBold';
+    font-size: 3.125vw;
+    color: #42495B;
+}
+
+#text-bio-03 {
+    width: 33.31%;
+    position: absolute;
+    margin-top: 66.81%;
+    margin-left: 51.125%;
+    text-align: justify;
+    font-family: 'Poppins-Light';
+    font-size: 1vw;
+    color: #7A839E
+}
+
+#text-bio-04 {
+    width: 33.31%;
+    position: absolute;
+    margin-top: 79.69%;
+    margin-left: 51.125%;
+    text-align: justify;
+    font-family: 'Poppins-Light';
+    font-size: 1vw;
+    color: #7A839E
+}
+
+#rect-02 {
+    position: absolute;
+    margin-top: 83.81%;
+    margin-left: 50.81%;
+    width: 10.14%;
+}
+
+#text-rect-02 {
+    position: absolute;
+    margin-top: 84.81%;
+    margin-left: 54.125%;
+    font-family: 'Poppins-Medium';
+    font-size: 0.75vw;
+    color: #ffffff;
+}
+
+
+/*  SERVICES */
+
+#text-services-01 {
+    position: absolute;
+    margin-top: 101.625%;
+    margin-left: 12.25%;
+    font-family: 'Lato';
+    font-size: 1.563vw;
+    color: #7E76F9;
+}
+
+#text-services-02 {
+    position: absolute;
+    margin-top: 104%;
+    margin-left: 12.25%;
+    font-family: 'Poppins-SemiBold';
+    font-size: 3.125vw;
+    color: #42495B;
+}
+
+#img-services {
+    position: absolute;
+    margin-top: 122.125%;
+    margin-left: 3.0625%;
+    width: 93.86%;
+}
+
+
+/* PRICE */
+
+#img-price {
+    position: absolute;
+    margin-top: 190.19%;
+    width: 100%;
+}
+
+#text-price-01 {
+    position: absolute;
+    margin-top: 192.56%;
+    margin-left: 48.125%;
+    font-family: 'Lato';
+    font-size: 1.25vw;
+    color: #7E76F9;
+}
+
+#text-price-02 {
+    position: absolute;
+    margin-top: 194.875%;
+    margin-left: 41.25%;
+    font-family: 'Poppins-SemiBold';
+    font-size: 3.125vw;
+    color: #42495B;
+}
+
+
+/* NEWSLETTER */
+
+#text-news-01 {
+    position: absolute;
+    margin-top: 249.75%;
+    margin-left: 47.0625%;
+    font-family: 'Lato';
+    font-size: 1.25vw;
+    color: #7E76F9;
+}
+
+#text-news-02 {
+    position: absolute;
+    margin-top: 252.0625%;
+    margin-left: 33.125%;
+    font-family: 'Poppins-Medium';
+    font-size: 2vw;
+    color: #42495B;
+}
+
+#text-news-03 {
+    font-family: 'Poppins-Bold';
+}
+
+#input-news {
+    width: 24%;
+    height: 6%;
+    position: absolute;
+    margin-top: 257.625%;
+    margin-left: 30.3125%;
+    padding-left: 1.875%;
+    font-family: 'Poppins-Medium';
+    font-size: 0.75vw;
+    color: #42495B;
+    background-color: #F6F7FB;
+    border-style: none;
+}
+
+#text-rect-03 {
+    position: absolute;
+    margin-left: 61.625%;
+    margin-top: 258.5%;
+    font-family: 'Poppins-Medium';
+    font-size: 1vw;
+    color: #ffffff;
+}
+
+#rect-03 {
+    position: absolute;
+    margin-top: 257.5625%;
+    margin-left: 58.8125%;
+    width: 10.625%;
+}
