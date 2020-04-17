@@ -4,70 +4,79 @@ $('#button-users').click(function() {
         status
     ) {
         console.log(users)
-            // const ul = $('#list-users');
 
-        // users.forEach(user => {
-        //     const li = $('<li/>');
-        //     li.append(user.name);
-        //     ul.append(li);
-
-
-        const div = $('#list-users');
+        const divListUser = $('#list-users');
 
         users.forEach(user => {
             const btn = $('<button/>', {
-                text: user.name, //set text 1 to 10
+                text: user.name,
                 id: user.id,
                 click: function() {
+                    $.get("http://localhost:4000/users",
+                        function(
+                            users,
+                            status) {
+                            const divUserPosts = $('#user-posts');
+                            const userPost = $('<h1/>');
+                            userPost.append(user.name);
+                            divUserPosts.append(userPost);
+                        })
 
                     $.get("http://localhost:4000/posts",
                         function(
                             posts,
                             status
                         ) {
-                            const ul = $('#list-posts');
+                            const divListPosts = $('#list-posts');
+
                             posts.forEach(post => {
                                 if (post.userId == user.id) {
-                                    const li = $('<li/>');
-                                    li.append(post.body);
-                                    ul.append(li);
+                                    const h3 = $('<h3/>');
+                                    const p = $('<p/>');
+                                    const divComment = $('<div/>')
+                                    const btnComments = $('<button/>', {
+                                        text: 'Comments',
+                                        id: post.id,
+                                        click: function() {
+                                            $.get("http://localhost:4000/comments",
+                                                function(
+                                                    comments,
+                                                    status
+                                                ) {
+                                                    comments.forEach(comment => {
+
+                                                        if (comment.postId == post.id) {
+                                                            const nameComment = $('<h6/>');
+                                                            const emailComment = $('<p/>');
+                                                            const bodyComment = $('<p/>');
+
+                                                            nameComment.append(comment.name);
+                                                            emailComment.append('by ' + comment.email);
+                                                            bodyComment.append(comment.body);
+
+                                                            divComment.append(nameComment);
+                                                            divComment.append(emailComment)
+                                                            divComment.append(bodyComment);
+                                                        }
+                                                    });
+                                                });
+                                        }
+                                    });
+
+                                    h3.append(post.title);
+                                    p.append(post.body);
+
+                                    divListPosts.append(h3);
+                                    divListPosts.append(p);
+                                    divListPosts.append(btnComments);
+                                    divListPosts.append(divComment)
+
                                 }
                             });
-
                         });
-
-
                 }
             });
-
-            div.append(btn);
-
-        });
-
-
-
-        // });
-    });
-});
-
-function loadPost(id) {
-    console.log(id);
-}
-
-
-$('#button-posts').click(function() {
-    $.get("http://localhost:4000/posts", function(
-        posts,
-        status
-    ) {
-        console.log(posts)
-        const ul = $('#list-posts');
-
-        posts.forEach(post => {
-            const li = $('<li/>');
-            li.append(post.body);
-            li.append(post.title);
-            ul.append(li);
+            divListUser.append(btn);
         });
     });
 });

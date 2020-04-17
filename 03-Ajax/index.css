@@ -31,7 +31,21 @@ body {
     color: #4D70A4;
 }
 
-button {
+#list-users>button {
+    font-family: 'Poppins-Bold';
+    font-size: 0.9em;
+    width: 100%;
+    color: #4D70A4;
+    border-style: solid;
+    border-top: 0em;
+    border-left: 0em;
+    border-right: 0em;
+    border-width: 0.01em;
+    border-color: #4D70A4;
+    background-color: #ffffff;
+}
+
+#button-posts {
     background-image: linear-gradient(to right, #F995A3, #FFB7C0);
     font-family: 'Poppins-Bold';
     color: white;
@@ -57,6 +71,11 @@ button {
 }
 
 #button-users {
+    background-image: linear-gradient(to right, #F995A3, #FFB7C0);
+    font-family: 'Poppins-Bold';
+    color: white;
+    border-style: none;
+    border-radius: 2em;
     margin-left: 2em;
     padding-left: 1em;
     padding-right: 1em;
@@ -70,11 +89,28 @@ button {
     line-height: 3em;
 }
 
-li {}
-
 
 /* POST */
 
-#columns-post {
-    border-radius: 1em;
+#user-posts {
+    color: #F995A3;
+    font-family: 'Poppins-Light';
+}
+
+#list-posts {
+    color: #4D70A4;
+}
+
+#list-posts>button {
+    font-size: 0.9em;
+    padding-left: 0em;
+    padding-bottom: 2em;
+    color: #F995A3;
+    text-decoration: underline;
+    border-style: none;
+    background-color: #ffffff;
+}
+
+#list-posts>h1 {
+    padding-top: 2em;
 }
