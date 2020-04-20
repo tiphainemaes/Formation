@@ -18,6 +18,10 @@ body {
     /* background-color: #4D70A4; */
 }
 
+button:focus {
+    outline: none;
+}
+
 .jumbotron {
     background-color: #ffffff;
 }
@@ -45,7 +49,7 @@ body {
     background-color: #ffffff;
 }
 
-#button-posts {
+#refresh {
     background-image: linear-gradient(to right, #F995A3, #FFB7C0);
     font-family: 'Poppins-Bold';
     color: white;
@@ -104,7 +108,7 @@ body {
 #list-posts>button {
     font-size: 0.9em;
     padding-left: 0em;
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
     color: #F995A3;
     text-decoration: underline;
     border-style: none;
@@ -113,4 +117,14 @@ body {
 
 #list-posts>h1 {
     padding-top: 2em;
+}
+
+
+/* COMMENTS */
+
+#test {
+    color: #4D70A4;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 2em;
 }
