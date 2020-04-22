@@ -4,8 +4,9 @@ import React from 'react';
 function Header() {
     return (
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-2 text-center">Todo</h1>
+            <div class="container text-center">
+                <h1 class="display-2">Todo</h1>
+                <h3 class="lead">Don't forget your task</h3>
             </div>
         </div>
     );
