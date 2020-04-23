@@ -18,15 +18,23 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(221, 222, 223);
+    background-color: white;
 }
 
 .jumbotron {
-    background-color: rgb(221, 222, 223);
+    color: lightseagreen;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#input {
+    margin-left: 1em;
+}
+
+#input:focus {
+    outline: none;
 }
 
 #todolist {
@@ -36,14 +44,37 @@ code {
 }
 
 #btn-add {
-    font-family: 'Poppins-Medium';
     height: 2.5em;
     width: 2.5em;
     border-radius: 20em;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-family: 'Byom';
 }
 
 #btn-delete {
+    font-family: 'Byom';
+    font-size: 1.2em;
+    background-color: white;
+    border-radius: 20em;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+#btn-select {
+    margin-right: 2em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 20em;
+    font-family: 'Byom';
+    font-size: 1.2em;
+}
+
+#btn-delete-all {
+    margin-left: 0.4em;
+    margin-top: 1em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 20em;
     font-family: 'Byom';
     font-size: 1.2em;
 }

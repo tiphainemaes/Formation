@@ -1,18 +1,18 @@
 import React from 'react';
 
-function Delete(props) {
+function Select(props) {
 
 
   return (
     <button
       type="button"
-      id="btn-delete"
-      className="btn btn-light float-right"
+      id="btn-select"
+      className="btn btn-outline-warning"
       onClick={props.onClick}
     >
-      X
+      V
     </button>
   );
 }
 
-export default Delete;
+export default Select;
