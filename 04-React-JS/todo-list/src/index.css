@@ -70,13 +70,19 @@ code {
 }
 
 #btn-delete-all {
-    margin-left: 0.4em;
     margin-top: 1em;
+    margin-right: 0.4em;
     height: 2.5em;
     width: 2.5em;
     border-radius: 20em;
     font-family: 'Byom';
     font-size: 1.2em;
+}
+
+#count {
+    color: lightseagreen;
+    margin-top: 1.5em;
+    text-align: center;
 }
 
 input {

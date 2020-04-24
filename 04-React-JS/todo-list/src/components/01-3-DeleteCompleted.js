@@ -1,13 +1,13 @@
 import React from 'react';
 
-function DeleteAll(props) {
+function DeleteCompleted(props) {
 
 
   return (
     <button
       type="button"
       id="btn-delete-all"      
-      className="btn btn-outline-danger p-1"
+      className="btn btn-outline-danger p-1 float-right"
       onClick={props.onClick}
     >
       X
@@ -15,4 +15,4 @@ function DeleteAll(props) {
   );
 }
 
-export default DeleteAll;
+export default DeleteCompleted;
