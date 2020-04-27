@@ -22,14 +22,11 @@ function Todo() {
     if (document.getElementById(index).style.color === 'lightseagreen') {
       document.getElementById(index).style.color = '#343a40';
       document.getElementById(index).style.textDecoration = 'none'
-    }
-    else if (count < 1) {
+    } else if (count < 1) {
       setCount(0)
-    }
-    else {
+    } else {
       setCount(count - 1);
     }
-
     setTaskArray(taskArray.filter((_, i) => i !== index));
   }
 
@@ -48,7 +45,7 @@ function Todo() {
       setSelected(selected.concat(id));
     }
   }
- 
+
   function deleteCompleted() {
     let tab = [];
     tab = taskArray;
