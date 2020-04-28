@@ -3,27 +3,31 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Delete from './02-Delete';
 import Select from './03-Select';
+import DeleteCompleted from './04-DeleteCompleted';
+import ActiveTask from './05-Active';
+import CompletedTask from './06-Completed';
+import SeeAll from './07-SeeAll';
 
 
 function Todo() {
 
     const [task, setTask] = useState({ id: 0, title: '', completed: false });
     const [taskArray, setTaskArray] = useState([]);
+    //const [count, setCount] = useState(0);
 
     useEffect(() => {
         fetchTodos();
     }, []);
-
     async function fetchTodos() {
         const result = await fetch('http://localhost:4000/todos');
         const data = await result.json();
         setTaskArray(data);
     }
 
+
     const addTask = event => {
         event.preventDefault();
         //setTaskArray(taskArray.concat(task));
-
         fetch('http://localhost:4000/todos', {
             method: "POST",
             headers: {
@@ -33,13 +37,14 @@ function Todo() {
         }).then(() => fetchTodos());
     }
 
+
     const deleteTask = (item) => {
         //setTaskArray(taskArray.filter((currentItem) => currentItem.id !== item.id));
-
         fetch(`http://localhost:4000/todos/${item.id}`, {
             method: "DELETE",
         }).then(() => fetchTodos());
     }
+
 
     const selectTask = (item) => {
         //item.completed = !item.completed;
@@ -50,17 +55,55 @@ function Todo() {
             },
             body: JSON.stringify({ "completed": !item.completed })
         }).then(() => fetchTodos());
+    }
 
 
-        if (item.completed === false) {
-            document.getElementById(item.id).style.color = '#343a40';
-            document.getElementById(item.id).style.textDecoration = 'none'
-        } else {
-            document.getElementById(item.id).style.color = 'lightseagreen'
-            document.getElementById(item.id).style.textDecoration = 'line-through'
-        }
+    const deleteCompleted = () => {
+        taskArray.forEach(item => {
+            if (item.completed === true) {
+                deleteTask(item);
+            }
+        });
+    }
 
+    const seeAllTask = () => {
+        // taskArray.forEach(item => {
+        //     document.getElementById(item.id).hidden = false;
+        // });
+        fetchTodos();
+    }
 
+    const activeTask = async () => {
+        // taskArray.forEach(item => {
+        //     if (item.completed === true) {
+        //         document.getElementById(item.id).hidden = true;
+        //     } else if (item.completed === false) {
+        //         document.getElementById(item.id).hidden = false;
+        //     }
+        // });
+
+        const result = await fetch("http://localhost:4000/todos/?completed=false");
+        const data = await result.json();
+
+        setTaskArray(data);
+        taskArray.forEach(item => {
+            //setCount(count +1)
+        });
+
+    }
+
+    const completedTask = async () => {
+        // taskArray.forEach(item => {
+        //     if (item.completed === true) {
+        //         document.getElementById(item.id).hidden = false;
+        //     } else if (item.completed === false) {
+        //         document.getElementById(item.id).hidden = true;
+        //     }
+        // });
+
+        const result = await fetch("http://localhost:4000/todos/?completed=true");
+        const data = await result.json();
+        setTaskArray(data);
     }
 
     return (
@@ -93,15 +136,24 @@ function Todo() {
                             <ul className=" col-sm-12 list-group list-group-flush my-4 p-1">
                                 {taskArray.map((item, i) =>
                                     <li
-                                        className='list-group-item p-2'
                                         key={i}
                                         id={item.id}
+                                        className={item.completed ? 'barred' : ''}
                                     >
                                         <Select onClick={() => selectTask(item)} />
                                         {item.title}
                                         <Delete onClick={() => deleteTask(item)} />
                                     </li>
                                 )}
+                                <div>
+                                    <SeeAll onClick={() => seeAllTask()} />
+                                    <ActiveTask onClick={() => activeTask()} />
+                                    <CompletedTask onClick={() => completedTask()} />
+                                    <DeleteCompleted onClick={() => deleteCompleted()} />
+                                </div>
+                                <div className="text-secondary font-weight-light text-center mt-4">
+                                    {/* {count} task(s) left */}
+                                </div>
                             </ul>
                         </div>
 
