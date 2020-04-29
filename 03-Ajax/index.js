@@ -4,7 +4,7 @@ $('#button-users').click(function() {
         $("#list-users").empty();
     }
 
-    $.get("http://localhost:4000/users", function(
+    $.get("http://localhost:4001/users", function(
         users,
         status
     ) {
@@ -17,7 +17,7 @@ $('#button-users').click(function() {
                 text: user.name,
                 id: user.id,
                 click: function() {
-                    $.get("http://localhost:4000/users",
+                    $.get("http://localhost:4001/users",
                         function(
                             users,
                             status) {
@@ -36,7 +36,7 @@ $('#button-users').click(function() {
                         $("#list-posts").empty();
                     }
 
-                    $.get("http://localhost:4000/posts",
+                    $.get("http://localhost:4001/posts",
                         function(
                             posts,
                             status
@@ -59,7 +59,7 @@ $('#button-users').click(function() {
                                             if (!($(divComment).is(':empty'))) {
                                                 $(divComment).empty();
                                             } else {
-                                                $.get("http://localhost:4000/comments",
+                                                $.get("http://localhost:4001/comments",
                                                     function(
                                                         comments,
                                                         status

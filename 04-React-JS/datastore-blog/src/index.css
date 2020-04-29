@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Poppins-ELight';
+    src: url(./css/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(./css/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(./css/Poppins-SemiBold.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button:focus {
+    outline: none;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+}
+
+#header {
+    background-color: #ffffff;
+}
+
+#title {
+    font-family: 'Poppins-ELight';
+    color: #4D70A4;
+}
+
+
+/* USERS */
+
+#title-users {
+    font-family: 'Poppins-Light';
+    color: #F995A3;
+    font-size: 1.875em;
+    margin-bottom: 0.75em;
+}
+
+li {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 13em;
+    font-family: 'Poppins-Bold';
+    font-size: 0.85em;
+    color: #4D70A4;
+    border-style: solid;
+    border-top: 0em;
+    border-left: 0em;
+    border-right: 0em;
+    border-width: 0.01em;
+    border-color: #4D70A4;
+    background-color: #ffffff;
+    list-style: none;
+}
+
+
+/* POSTS */
+
+#username-post {
+    font-family: 'Poppins-Light';
+    font-size: 2.4em;
+    color: #F995A3
+}
+
+#name-post {
+    font-family: 'Poppins-Light';
+    color: #F995A3;
+}
+
+#post {
+    color: #4D70A4;
+}
+
+
+/* COMMENTS */
+
+#comment {
+    color: #F995A3;
+    text-decoration: underline;
+    font-size: 0.8em;
+}
