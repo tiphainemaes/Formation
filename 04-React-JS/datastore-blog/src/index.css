@@ -28,12 +28,10 @@ button:focus {
     outline: none;
 }
 
-.jumbotron {
-    background-color: #ffffff;
-}
-
 #header {
     background-color: #ffffff;
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
 
 #title {
@@ -51,21 +49,48 @@ button:focus {
     margin-bottom: 0.75em;
 }
 
-li {
+#btn-users {
+    margin-bottom: 4em;
+}
+
+#button-users {
+    background-image: linear-gradient(to right, #F995A3, #FFB7C0);
+    font-family: 'Poppins-Bold';
+    color: white;
+    border-style: none;
+    border-radius: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#list-users>button {
     padding-bottom: 1em;
     padding-top: 1em;
-    width: 13em;
+    padding-left: 1em;
+    padding-right: 1em;
     font-family: 'Poppins-Bold';
-    font-size: 0.85em;
+    font-size: 0.7em;
     color: #4D70A4;
-    border-style: solid;
-    border-top: 0em;
-    border-left: 0em;
-    border-right: 0em;
-    border-width: 0.01em;
     border-color: #4D70A4;
-    background-color: #ffffff;
+    border-radius: 0.5em;
+    border-style: solid;
+    margin: 0.15em;
+    background-color: white;
     list-style: none;
+    transition-duration: 1s;
+}
+
+#list-users>button:hover {
+    background-color: #4D70A4;
+    color: #ffffff;
+    transition-duration: 1s;
+}
+
+img {
+    width: 10em;
 }
 
 
@@ -83,14 +108,25 @@ li {
 }
 
 #post {
+    padding: 2em;
     color: #4D70A4;
+    text-align: justify;
 }
 
 
 /* COMMENTS */
 
 #comment {
+    text-align: justify;
+    padding-left: 2.4em;
     color: #F995A3;
     text-decoration: underline;
+    font-size: 0.8em;
+}
+
+#body-comment {
+    padding: 2.4em;
+    color: #4D70A4;
+    text-align: justify;
     font-size: 0.8em;
 }

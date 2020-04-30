@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import Post from './02-posts';
+import Comment from './03-comments';
+
 
 
 function Blog() {
 
-    const [user, setUser] = useState({ id: 0, name: '', username: '', email: '', adress: { street: '', suite: '', city: '', zipcode: 0, geo: { lat: 0, lng: 0 } }, phone: 0, website: '', company: { name: '', catchPhrase: '', bs: '' } });
+    const [displayUser, setDisplayUser] = useState([]);
     const [userArray, setUserArray] = useState([]);
-    const [currentUser, setCurrentUser] = useState({ id: 0, name: '', username: '' });
+    const [currentUser, setCurrentUser] = useState({ id: 0, name: '', username: '', image: '' });
     const [postArray, setPostArray] = useState([]);
     const [currentPosts, setCurrentPosts] = useState([]);
     const [commentArray, setCommentArray] = useState([]);
     const [currentComments, setCurrentComments] = useState([]);
+
 
     useEffect(() => {
         fetchUsers();
@@ -39,12 +43,19 @@ function Blog() {
     }
 
 
+    const getUsers = () => {
+        let tabUser = [];
+        userArray.forEach(item => {
+            tabUser.push(item);
+        });
+        setDisplayUser(tabUser);
+    }
 
-    const getPosts = (item) => {
+    const getPosts = (user) => {
         let tabPost = [];
-        setCurrentUser({ id: item.id, name: item.name, username: item.username });
+        setCurrentUser({ id: user.id, name: user.name, username: user.username, image: user.image });
         postArray.forEach(post => {
-            if (post.userId === item.id) {
+            if (post.userId === user.id) {
                 tabPost.push(post);
             }
         });
@@ -58,68 +69,60 @@ function Blog() {
                 tabComment.push(comment);
             }
         });
-        setCurrentComments(tabComment)
+        setCurrentComments(tabComment);
     }
 
 
     return (
-        <div className="container">
-            <div className="row">
-               
-                <div className="col-sm-3 ">
-                    <p id="title-users">Users</p>
 
-                    <ul className="text-center" id="list-users">
-                        {userArray.map((item, i) =>
-                            <li key={i} id={item.id} onClick={() => getPosts(item)}>
-                                {item.name}
-                            </li>
+        <div>
+            <div className="row" id="btn-users">
+                <div className="col text-center">
+                    <div><button id="button-users" onClick={() => getUsers()}>+</button></div>
+                    <span className="text-center" id="list-users">
+                        {displayUser.map((user, i) =>
+                            <button key={i} id={user.id} onClick={() => getPosts(user)} className="nav-item">
+                                {user.name}
+                            </button>
                         )}
-                    </ul>
-                </div>
-
-                <div className="col-sm-1"></div>
-
-                <div className="col-sm-7 ">
-                    <div id="user-posts">
-
-                        <h3 id='username-post'>{currentUser.username}</h3>
-                        <p id='name-post'>{currentUser.name}</p>
-
-                        {currentPosts.map((post, i) =>
-                            <div id='post'>
-
-                                <h4 key={i} id={post.id}>
-                                    {post.title}
-                                </h4>
-                                <p key={i} id={post.id}>
-                                    {post.body}
-                                </p>
-
-                                <div>
-                                    <p id='comment' onClick={() => getComments(post)}>Comments</p>
-
-                                    {currentComments.map((comment, i) =>
-                                        <div>
-                                            <h6 key={i} id={comment.id}>
-                                                {comment.name}
-                                            </h6>
-                                            <p key={i} id={comment.id}>
-                                                {comment.email}
-                                            </p>
-                                            <p key={i} id={comment.id}>
-                                                {comment.body}
-                                            </p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                    <div id="list-posts" className="list-unstyled text-justify my-5"></div>
+                    </span>
                 </div>
             </div>
-        </div>
+
+            <div className="row">
+                <div className="col text-center">
+                    <h3 id='username-post'>{currentUser.username}</h3>
+                    <p id='name-post'>{currentUser.name}</p>
+                    <img src={currentUser.image}></img>
+                </div>
+            </div>
+
+            <div className="container">
+                <div className="row">
+                    {currentPosts.map((post, i) =>
+                        <div className="col col-sm-4">
+                            <Post
+                                key={i}
+                                id={post.id}
+                                title={post.title}
+                                body={post.body}
+                            />
+                            <p id='comment' onClick={() => getComments(post)}>Comments</p>
+                            {currentComments.map((comment, i) =>
+                                <Comment
+                                    key={i}
+                                    id={comment.id}
+                                    name={comment.name}
+                                    email={comment.email}
+                                    body={comment.body}
+                                    postId={post.id}
+                                    commentPostId={comment.postId}
+                                />)}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div >
     );
 }
 
