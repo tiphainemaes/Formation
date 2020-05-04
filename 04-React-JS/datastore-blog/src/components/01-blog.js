@@ -6,7 +6,6 @@ import Comment from './03-comments';
 
 function Blog() {
 
-    const [displayUser, setDisplayUser] = useState([]);
     const [userArray, setUserArray] = useState([]);
     const [currentUser, setCurrentUser] = useState({ id: 0, name: '', username: '', image: '' });
     const [postArray, setPostArray] = useState([]);
@@ -42,15 +41,6 @@ function Blog() {
         setCommentArray(data);
     }
 
-
-    const getUsers = () => {
-        let tabUser = [];
-        userArray.forEach(item => {
-            tabUser.push(item);
-        });
-        setDisplayUser(tabUser);
-    }
-
     const getPosts = (user) => {
         let tabPost = [];
         setCurrentUser({ id: user.id, name: user.name, username: user.username, image: user.image });
@@ -72,20 +62,22 @@ function Blog() {
         setCurrentComments(tabComment);
     }
 
-
+    
     return (
 
         <div>
             <div className="row" id="btn-users">
                 <div className="col text-center">
-                    <div><button id="button-users" onClick={() => getUsers()}>+</button></div>
+
+                    <div id="header-list-users"></div>
                     <span className="text-center" id="list-users">
-                        {displayUser.map((user, i) =>
+                        {userArray.map((user, i) =>
                             <button key={i} id={user.id} onClick={() => getPosts(user)} className="nav-item">
                                 {user.name}
                             </button>
                         )}
                     </span>
+
                 </div>
             </div>
 
@@ -101,23 +93,26 @@ function Blog() {
                 <div className="row">
                     {currentPosts.map((post, i) =>
                         <div className="col col-sm-4">
-                            <Post
-                                key={i}
-                                id={post.id}
-                                title={post.title}
-                                body={post.body}
-                            />
-                            <p id='comment' onClick={() => getComments(post)}>Comments</p>
-                            {currentComments.map((comment, i) =>
-                                <Comment
+                            
+                                <Post
                                     key={i}
-                                    id={comment.id}
-                                    name={comment.name}
-                                    email={comment.email}
-                                    body={comment.body}
-                                    postId={post.id}
-                                    commentPostId={comment.postId}
-                                />)}
+                                    id={post.id}
+                                    title={post.title}
+                                    body={post.body}
+                                />
+
+                                <p id='comment' onClick={() => getComments(post)}>Comments</p>
+                                {currentComments.map((comment, i) =>
+                                    <Comment
+                                        key={i}
+                                        id={comment.id}
+                                        name={comment.name}
+                                        email={comment.email}
+                                        body={comment.body}
+                                        postId={post.id}
+                                        commentPostId={comment.postId}
+                                    />)}
+                           
                         </div>
                     )}
                 </div>
