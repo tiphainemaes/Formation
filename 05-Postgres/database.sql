@@ -1,13 +1,9 @@
--- 4. Enregistrer le prix total à l’intérieur de chaque ligne des commandes, en fonction du prix unitaire et 
--- de la quantité.
+--14. Supprimer toutes les commandes (et les lignes des commandes) inférieur au 
+--1er février 2019. Cela doit être effectué en 2 requêtes maximum
 
-UPDATE commande_ligne 
-SET prix_total = SUM(prix_unitaire)
-WHERE commande_id
-
-SELECT nom, COUNT(nom) AS nombre_produit, commande_id
+SELECT nom, COUNT(nom) AS nombre_produit, 
 FROM commande_ligne
-GROUP BY nom, commande_id
+GROUP BY nom
 HAVING COUNT(nom) > 1
 ORDER BY nombre_produit DESC;
 
@@ -15,3 +11,6 @@ ORDER BY nombre_produit DESC;
 SELECT * FROM client;
 SELECT * FROM commande;
 SELECT * FROM commande_ligne;
+
+
+
