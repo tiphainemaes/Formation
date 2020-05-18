@@ -30,7 +30,9 @@
 --     email VARCHAR(200),
 --     body text
 -- );
-;
+
+UPDATE users set image = 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/12_avatar-512.png'
+WHERE id = 10;
 
 SELECT * from users;
 SELECT * from posts;

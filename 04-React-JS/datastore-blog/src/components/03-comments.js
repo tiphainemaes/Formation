@@ -3,11 +3,9 @@ import React from 'react';
 
 function Comment(props) {
 
-    if (props.postId == props.commentPostId) {
-
+    if (props.post_id === props.commentPost_id) {
 
         return (
-
             <div id="body-comment">
                 <h6 key={props.key} id={props.id}>
                     {props.name}
@@ -19,7 +17,6 @@ function Comment(props) {
                     {props.body}
                 </p>
             </div>
-
         );
     }
     else {

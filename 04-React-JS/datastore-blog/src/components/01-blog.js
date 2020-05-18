@@ -18,7 +18,7 @@ function Blog() {
         fetchUsers();
     }, []);
     async function fetchUsers() {
-        const result = await fetch('http://localhost:4000/users');
+        const result = await fetch('http://localhost:3000/users');
         const data = await result.json();
         setUserArray(data);
     }
@@ -27,7 +27,7 @@ function Blog() {
         fetchPosts();
     }, []);
     async function fetchPosts() {
-        const result = await fetch('http://localhost:4000/posts');
+        const result = await fetch('http://localhost:3000/posts');
         const data = await result.json();
         setPostArray(data);
     }
@@ -36,7 +36,7 @@ function Blog() {
         fetchComments();
     }, []);
     async function fetchComments() {
-        const result = await fetch('http://localhost:4000/comments');
+        const result = await fetch('http://localhost:3000/comments');
         const data = await result.json();
         setCommentArray(data);
     }
@@ -45,7 +45,7 @@ function Blog() {
         let tabPost = [];
         setCurrentUser({ id: user.id, name: user.name, username: user.username, image: user.image });
         postArray.forEach(post => {
-            if (post.userId === user.id) {
+            if (post.user_id === user.id) {
                 tabPost.push(post);
             }
         });
@@ -55,20 +55,18 @@ function Blog() {
     const getComments = (post) => {
         let tabComment = [];
         commentArray.forEach(comment => {
-            if (comment.postId === post.id) {
+            if (comment.post_id === post.id) {
                 tabComment.push(comment);
             }
         });
         setCurrentComments(tabComment);
     }
-
     
     return (
 
         <div>
             <div className="row" id="btn-users">
                 <div className="col text-center">
-
                     <div id="header-list-users"></div>
                     <span className="text-center" id="list-users">
                         {userArray.map((user, i) =>
@@ -109,8 +107,8 @@ function Blog() {
                                         name={comment.name}
                                         email={comment.email}
                                         body={comment.body}
-                                        postId={post.id}
-                                        commentPostId={comment.postId}
+                                        post_id={post.id}
+                                        commentPost_id={comment.post_id}
                                     />)}
                            
                         </div>

@@ -5,6 +5,9 @@ const posts = require('./app/routes/posts');
 const comments = require('./app/routes/comments');
 const app = express();
 const PORT = 3000;
+var cors = require('cors');
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(

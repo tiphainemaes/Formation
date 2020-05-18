@@ -19,7 +19,7 @@ const getPostById = (request, response) => {
         response.status(200).json(results.rows)
     })
 };
-
+ 
 const getPostByUserId = (request, response) => {
     const user_id = parseInt(request.params.user_id);
 
