@@ -1,0 +1,539 @@
+swagger: "2.0"
+info:
+  description: "Blog API - Users, Posts, Comments" 
+  version: "1.0.0"
+  title: "Swagger Blog"
+  contact:
+    email: "contact@afpa.fr"
+host: "localhost:3000"
+tags:
+- name: "Users"
+  description: "Operations about user"
+  externalDocs:
+    description: ""
+    url: "localhost:3000/users"
+- name: "Posts"
+  description: "Operations about user"
+  externalDocs:
+    description: ""
+    url: "localhost:3000/posts"
+- name: "Comments"
+  description: "Operations about user"
+  externalDocs:
+    description: ""
+    url: "localhost:3000/comments"
+schemes:
+- "https"
+- "http"
+
+paths:
+  /users:
+    get:
+      tags:
+      - "Users"
+      summary: "Get all users"
+      description: "Get all users"
+      operationId: "getUsers"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get all users"
+        required: true
+        schema:
+          $ref: "#/definitions/Users"
+      responses:
+        "405":
+          description: "Invalid input"
+    
+    post:
+      tags:
+      - "Users"
+      summary: "Create a new user"
+      description: "Create a new user"
+      operationId: "createUser"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create a new user"
+        required: true
+        schema:
+          $ref: "#/definitions/Users"
+      responses:
+        "405":
+          description: "Invalid input"  
+    
+  /users/:id:
+    get:
+      tags:
+      - "Users"
+      summary: "Get a user by id"
+      description: "Get a user by id"
+      operationId: "getUserById"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "User id to get"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "body"
+        description: "Get a user by id"
+        required: true
+        schema:
+          $ref: "#/definitions/Users"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "User not found"
+
+    delete:
+      tags:
+      - "Users"
+      summary: "Delete a user by id"
+      description: "Delete a user by id"
+      operationId: "deleteUser"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "User id to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "User not found"
+      
+    put:
+      tags:
+      - "Users"
+      summary: "Update an existing user"
+      description: "Update an existing user"
+      operationId: "updateUser"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Update an existing user"
+        required: true
+        schema:
+          $ref: "#/definitions/Users"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "User not found"
+        "405":
+          description: "Validation exception"
+      
+        
+  /posts:
+    get:
+      tags:
+      - "Posts"
+      summary: "Get all posts"
+      description: "Get all posts"
+      operationId: "getPosts"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get all posts"
+        required: true
+        schema:
+          $ref: "#/definitions/Posts"
+      responses:
+        "405":
+          description: "Invalid input"
+           
+    post:
+      tags:
+      - "Posts"
+      summary: "Create a new post"
+      description: "Create a new post"
+      operationId: "createPost"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create a new post"
+        required: true
+        schema:
+          $ref: "#/definitions/Posts"
+      responses:
+        "405":
+          description: "Invalid input"
+      
+  /posts/:id:
+    get:
+      tags:
+      - "Posts"
+      summary: "Get a user with his id"
+      description: "Get a user with his id"
+      operationId: "getPostById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "user_id"
+        in: "path"
+        description: "User id"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "User not found"
+        
+    delete:
+      tags:
+      - "Posts"
+      summary: "Delete a user by id"
+      description: "Delete a user by id"
+      operationId: "deletePost"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "postId"
+        in: "path"
+        description: "Post id to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Post id not found"
+       
+    put:
+      tags:
+      - "Posts"
+      summary: "Update an existing post"
+      description: "Update an existing post"
+      operationId: "updatePost"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Update an existing post"
+        required: true
+        schema:
+          $ref: "#/definitions/Posts"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Post id not found"
+        "405":
+          description: "Validation exception"
+      
+  /users/:user_id/posts:
+    get:
+      tags:
+      - "Posts"
+      summary: "Get all posts by user id"
+      description: "Get all posts by user id"
+      operationId: "getPostsByUserId"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "user_id"
+        in: "path"
+        description: "User id"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "User not found"
+   
+  /comments:
+    get:
+      tags:
+      - "Comments"
+      summary: "Get all comments"
+      description: "Get all comments"
+      operationId: "getComments"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Get all comments"
+        required: true
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "405":
+          description: "Invalid input"
+           
+    post:
+      tags:
+      - "Comments"
+      summary: "Create a new comment"
+      description: "Create a new comment"
+      operationId: "createComment"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create a new comment"
+        required: true
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "405":
+          description: "Invalid input"
+      
+  /comments/:id:
+    get:
+      tags:
+      - "Comments"
+      summary: "Get a comment by id"
+      description: "Get a comment by id"
+      operationId: "getCommentById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "post_id"
+        in: "path"
+        description: "Post id"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Comment not found"
+        
+    delete:
+      tags:
+      - "Comments"
+      summary: "Delete a comment by id"
+      description: "Delete a comment by id"
+      operationId: "deleteComment"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "comment_id"
+        in: "path"
+        description: "Comment id to delete"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Comment not found"
+       
+    put:
+      tags:
+      - "Comments"
+      summary: "Update an existing comment"
+      description: "Update an existing comment"
+      operationId: "updateComment"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Update an existing comment"
+        required: true
+        schema:
+          $ref: "#/definitions/Comments"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Comment id not found"
+        "405":
+          description: "Validation exception"
+      
+  /posts/:post_id/comments:
+    get:
+      tags:
+      - "Comments"
+      summary: "Get all comments by post id"
+      description: "Get all comments by post id"
+      operationId: "getCommentsByPostId"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "header"
+        required: false
+        type: "string"
+      - name: "post_id"
+        in: "path"
+        description: "Post id"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Comment not found"
+    
+definitions:
+  Users:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      username:
+        type: "string"
+      email:
+        type: "string"
+      address_street:
+        type: "string"
+      address_suite:
+        type: "string"
+      address_city:
+        type: "string"
+      address_zip:
+        type: "string"
+      address_geo_lat: 
+        type: "integer"
+      address_geo_lng:
+        type: "integer"
+      phone:
+        type: "string"
+      website: 
+        type: "string"
+      company_name:
+        type: "string"
+      company_catchphrase:
+        type: "string"
+      company_bs:
+        type: "string"
+      image:
+        type: "string"
+    xml:
+      name: "Users"
+  Posts:
+    type: "object"
+    properties:
+      user_id: 
+        type: "integer"
+        format: "int64"
+      id:
+        type: "integer"
+        format: "int64"
+      title:
+        type: "string"
+      body: 
+        type: "string"
+    xml:
+      name: "Posts"
+  Comments:
+    type: "object"
+    properties:
+      post_id: 
+        type: "integer"
+        format: "int64"
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      email: 
+        type: "string"
+      body:
+        type: "string"
+    xml:
+      name: "Posts"
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

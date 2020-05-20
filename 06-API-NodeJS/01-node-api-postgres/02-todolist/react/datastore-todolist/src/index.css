@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Byom';
+    src: url(./fonts/Byom-Icons-Trial.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url(./fonts/Poppins/Poppins-Medium.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(./fonts/Poppins/Poppins-Light.ttf)
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+}
+
+.jumbotron {
+    color: lightseagreen;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#input {
+    margin-left: 1em;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#todolist {
+    border-style: solid;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#btn-add {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 20em;
+    font-size: 1.4em;
+    font-family: 'Byom';
+}
+
+#btn-delete {
+    font-family: 'Byom';
+    font-size: 1.2em;
+    background-color: white;
+    border-radius: 20em;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+#btn-select {
+    margin-right: 2em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 20em;
+    font-family: 'Byom';
+    font-size: 1.2em;
+}
+
+#btn-delete-all {
+    margin-top: 1em;
+    margin-right: 0.5em;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 20em;
+    font-family: 'Byom';
+    font-size: 1.2em;
+}
+
+#btn-active {
+    margin-left: 3.2em;
+    margin-top: 1.7em;
+    color: lightseagreen;
+}
+
+#btn-completed {
+    margin-top: 1.7em;
+    color: lightseagreen;
+}
+
+#btn-all {
+    margin-top: 1.45em;
+    color: lightseagreen;
+}
+
+#count {
+    color: lightseagreen;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+input {
+    font-family: 'Poppins-Light';
+}
+
+li {
+    font-family: 'Poppins-Light';
+    list-style: none;
+    padding: 0.7em;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(204, 199, 199);
+    border-bottom-width: 0.01em;
+}
+
+.barred {
+    color: lightseagreen;
+    text-decoration: line-through;
+}
